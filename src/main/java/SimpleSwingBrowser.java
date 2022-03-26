@@ -51,10 +51,10 @@ public class SimpleSwingBrowser extends JFrame {
         JPanel topBar = new JPanel(new BorderLayout(5, 0));
         topBar.setBorder(BorderFactory.createEmptyBorder(3, 5, 3, 5));
 
-        JPanel statusBar = new JPanel(new BorderLayout(5, 0));
-        statusBar.setBorder(BorderFactory.createEmptyBorder(3, 5, 3, 5));
+        JPanel statusBar = new JPanel(new BorderLayout(3, 0));
+//        statusBar.setBorder(BorderFactory.createEmptyBorder(3, 5, 3, 5));
         statusBar.add(lblStatus, BorderLayout.CENTER);
-        statusBar.add(btnSave, BorderLayout.EAST);
+        statusBar.add(btnSave, BorderLayout.CENTER);
 
         panel.add(topBar, BorderLayout.NORTH);
         panel.add(jfxPanel, BorderLayout.CENTER);

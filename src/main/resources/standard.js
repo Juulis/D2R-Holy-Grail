@@ -9,19 +9,31 @@ $(document).ready(function(){
         e.preventDefault()
         if(e.which == 1){
             $(this).text(Number(Number(this.innerText)+1));
-            setTimeout(changeColorBriefly(this, 'blue'), 3000)
         }
         else if(e.which == 3){
             $(this).text(Number(Number(this.innerText)-1));
-            setTimeout(changeColorBriefly(this), 3000)
-
         }
     }));
 
+//set PERF attr
+ $('.s').mousedown( doubleRightClickHandler(function (e) {
+        e.preventDefault()
+        if($(this).css('color') != 'rgb(50, 205, 50)')
+            $(this).css('color','rgb(50, 205, 50)');
+        else
+            $(this).css('color','rgba(210, 210, 210, 0.3)');
+    }));
 
-    function changeColorBriefly(e, color){
-        $(e).css("color", "red");
-    }
+//set ETH attr
+$('.c').mousedown( doubleRightClickHandler(function (e) {
+        e.preventDefault()
+        if($(this).css('color') != 'rgb(186, 197, 195)')
+            $(this).css('color','rgba(186, 197, 195, 1)');
+        else
+            $(this).css('color','rgba(210, 210, 210, 0.3)');
+    }));
+
+
     function doubleRightClickHandler( handler ) {
         var timeout = 0, clicked = false;
         return function(e) {

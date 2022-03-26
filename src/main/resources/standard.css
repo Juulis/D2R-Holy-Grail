@@ -2,6 +2,23 @@
 /*  The following styles are required. You can change their  */
 /*  attributes but you cannot change their name.             */
 
+/* remove textcursor when hovering text */
+td:hover
+{
+     cursor: default;
+}
+td
+{
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    /*
+        Introduced in Internet Explorer 10.
+        See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+    */
+    -ms-user-select: none;
+    user-select: none;
+}
 .body
 {
 	color : whitesmoke;
@@ -41,23 +58,27 @@
 .b
 {
 	font-family : Arial, Helvetica, Sans-serif;
-	color : royalblue;
+	color : burlywood;
 	font-size : 10;
 	font-weight : BOLD;
+	padding: 0px 10px;
+	border-style: dashed;
+    border-width: 0.5px;
+    border-color: darkgrey;
 }
 
 .s
 {
 	font-family : Arial, Helvetica, Sans-serif;
-	color : indianred;
 	font-size : 10;
 	font-weight : BOLD;
+	color: rgba(210, 210, 210, 0.3);
 }
 
 .c
 {
 	font-family : Arial, Helvetica, Sans-serif;
-	color : #C7C966;
+	color : rgba(210, 210, 210, 0.3);
 	font-size : 10;
 	font-weight : BOLD;
 }
