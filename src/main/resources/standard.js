@@ -13,6 +13,7 @@ $(document).ready(function(){
         else if(e.which == 3){
             $(this).text(Number(Number(this.innerText)-1));
         }
+        calculateTable(this);
     }));
 
 //set PERF attr
@@ -54,5 +55,34 @@ $('.c').mousedown( doubleRightClickHandler(function (e) {
         };
     }
 
+    function calculateTable(e){
+        //TODO: find all td in selected category and calculate from that instead
+        if($(e).text() != 1)
+            return;
+        el = $(e).closest('table').prevUntil('.subcat').prev();
+        s = el.html();
+//      console.log(s);
+        //get the numbers
+        first = s.indexOf("(");
+        second = s.indexOf(")");
+        numbers = s.slice(first+1, second).split(" of ");
+//      console.log(numbers);
+        //get text
+        text = s. split(' ').filter(element => element.length > 2)[0];
+//      console.log(text);
+        //get %
+        first = s.lastIndexOf("(");
+        second = s.lastIndexOf(")");
+        p = s.slice(first+1,second).split("%")
+        //change %
+        newp = ((Number(numbers[0])+1) / Number(numbers[1]) * 100);
+        //set newp with one decimal
+        newp = Math.round((newp + Number.EPSILON) * 10) / 10;
+        //increment number, create new text and add to element
+        newText = `${text} (${Number(numbers[0])+1} of ${numbers[1]}) (${newp}%)`;
+        el.html(newText);
+//      console.log(newText)
+        //Axes (0 of 8) (0.0%)
+    }
 
 });
