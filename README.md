@@ -8,5 +8,4 @@ X - a rightclick on td class "b" should decrement the value in the td
 - hover div class "u" should trigger popup containing info+image from d2-holy-grail.herokuapp/api, https://d2-holy-grail.herokuapp.com/api/items/Iron%20Pelt  (image: https://d2-holy-grail.herokuapp.com/images/items/studdedleather.gif from "image" property gotten from first api call)
 - a click on div "e" should toggle ETH text in different color
 - a click on div "c" should toggle PERF text in different color
-
-Status: just started!
+- autosave on change
