@@ -115,3 +115,14 @@
 	color : royalblue;
 	font-size : 10;
 }
+
+/* attr */
+.b, .c, .s, .u
+{
+font-size:14
+}
+/* standard text */
+.u, .d
+{
+font-size:16
+}
